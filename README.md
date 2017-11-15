@@ -1,4 +1,4 @@
-# Vue-multi-page
+# Vue-music-multi-page
 这个demo是用vue-cli来做修改开发的多页面音乐webApp项目
 ```
 > 内容均为上线的真实数据，调用的QQ音乐数据接口
@@ -6,7 +6,6 @@
 
 > 多页面音乐webApp项目
 
-## Build Setup
 
 ``` bash
 # install dependencies
@@ -58,7 +57,7 @@ exports.getEntries = function (globPath) {
 
 
 其次，对webpack.base.conf.js进行改造
-```	
+```
 	删除 ~~entry: {app: './src/main.js'},~~，取而代之如下：
 
 	javascript
@@ -71,7 +70,7 @@ exports.getEntries = function (globPath) {
 
  最后改造webpack.dev.conf.js和webpack.prod.conf.js
  注释原来的HtmlWebpackPlugin
-```  
+```
   var pages = utils.getEntries('./src/page/**/*.html')
 for(var page in pages) {
   // 配置生成的html文件，定义路径等
@@ -90,4 +89,4 @@ for(var page in pages) {
   // 需要生成几个html文件，就配置几个HtmlWebpackPlugin对象
   module.exports.plugins.push(new HtmlWebpackPlugin(conf))
   ```
-  
+
