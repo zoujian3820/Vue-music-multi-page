@@ -32,6 +32,7 @@
 > cnpm install stylus --save-dev
 > cnpm install stylus-loader --save-dev
 > cnpm install babel-polyfill --save-dev   //main.js引入 import 'babel-polyfill'
+> cnpm install express --save-dev
 ```
 
 
