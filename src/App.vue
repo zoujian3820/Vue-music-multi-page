@@ -13,11 +13,16 @@
   import MHeader from 'components/m-header/m-header'
   import VTab from 'components/tab/tab'
   import Player from 'components/player/player'
+
   export default {
     components: {
       MHeader,
       VTab,
       Player
+    },
+    mounted(){
+      console.log(this)
+      //this.$router.push('/Singer')
     }
   }
 </script>

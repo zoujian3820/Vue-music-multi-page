@@ -1,5 +1,40 @@
 # Vue-music-multi-page
 这个demo是用vue-cli来做修改开发的多页面音乐webApp项目
+
+##### 项目构建基本流程
+
+> 全局安装vue-cli，并创建基于webpack的vue-cli项目
+```
+> cnpm install --g vue-cli
+> vue init webpack my-project
+> cd my-project
+> cnpm install
+> npm run dev
+```
+
+>> 安装其他一些项目开发需要的依赖库
+###### 安装的生产环境依赖库 --save
+```
+> cnpm install babel-runtime --save
+> cnpm install fastclick --save     //main.js引入 fastclick.attach(document.body)
+> cnpm install vuex --save
+> cnpm install jsonp --save
+> cnpm install better-scroll --save
+> cnpm install axios --save
+> cnpm install vue-lazyload --save
+> cnpm install create-keyframe-animation --save
+> cnpm install js-base64 --save
+> cnpm install lyric-parser --save
+```
+
+###### 安装的开发环境依赖库 -dev
+```
+> cnpm install stylus --save-dev
+> cnpm install stylus-loader --save-dev
+> cnpm install babel-polyfill --save-dev   //main.js引入 import 'babel-polyfill'
+```
+
+
 ```
 > 内容均为上线的真实数据，调用的QQ音乐数据接口
 ```

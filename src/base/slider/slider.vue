@@ -78,8 +78,9 @@
         })
         this.slider.on('scrollEnd', () => {
           let pageIndex = this.slider.getCurrentPage().pageX
-          if(this.loop) pageIndex -= 1
-          this.currentPageIndex = pageIndex
+          //console.log(pageIndex)
+          if(this.loop) pageIndex -= 1        //因为是无缝（限）循环，所以多两张，起始时默认是从第二个子元素开始this.slider.getCurrentPage().pageX : 2
+          this.currentPageIndex = pageIndex   //所以计算当前播放到哪一张的，标识点<span class="dot" :class="{'active':currentPageIndex==index}">时，要减一
           if(this.autoPlay){
             clearTimeout(this.timer)
             this._play()
@@ -87,7 +88,7 @@
         })
       },
       _play() {
-        let pageIndex = this.currentPageIndex + 1
+        let pageIndex = this.currentPageIndex + 1  //因为重新计算图片播放到哪一张了，所以要先加一，然后因为是无缝（限）循环，再播放下一张，所以还要加一
         if(this.loop) pageIndex += 1
         this.timer = setTimeout(()=>{
           this.slider.goToPage(pageIndex, 0, 400)
